@@ -14,29 +14,29 @@ function scss() {
 }
 
 function html() {
-  return src('./src/*.html').pipe(dest('./dist/')).pipe(connect.reload())
+  return src('./src/*.html').pipe(dest('./dist')).pipe(connect.reload())
 }
 
 function img() {
-  return src('./src/img/**/*').pipe(desc('./dist/img/')).pipe(connect.reload())
+  return src('./src/img/**/*.*').pipe(dest('./dist/img')).pipe(connect.reload())
 }
 
 function js() {
-  return src('./src/js/**/*.js').pipe(desc('./dist/js/')).pipe(connect.reload())
+  return src('./src/js/**/*.js').pipe(dest('./dist/js')).pipe(connect.reload())
 }
 
 function connectDev() {
   connect.server({
     root: './dist',
     port: 8000,
-    livereload: true,
+    livereload: true
   })
 }
 
 function watchDist() {
   watch('src/scss/**/*.scss', scss)
   watch('src/*.html', html)
-  watch('src/img/**/*', img)
+  watch('src/img/**/*.*', img)
   watch('src/js/**/*.js', js)
 }
 

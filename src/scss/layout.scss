@@ -10,43 +10,64 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: $header-height;
     background-color: $color-white;
     width: 100%;
     .header__in {
       position: relative;
-      height: 70%;
+      height: $header-in-height;
       .logo {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: $padding-m;
+        transform: translateY(-50%);
+        &::after {
+          content: '';
+          width: 1px;
+          height: 24px;
+          display: inline-block;
+          margin: 0 6px;
+          background-color: $color-gray;
+        }
       }
       .search {
         position: absolute;
-        top: 0;
-        left: 50px;
+        top: 50%;
+        left: 58px;
+        width: calc(100% - 180px);
+        transform: translateY(-50%);
+        &::placeholder {
+          color: $color-gray;
+        }
       }
       .actions {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 50%;
+        right: $padding-m;
+        transform: translateY(-50%);
         li {
-          float: left;
-        }
-        &::after {
-          @include clearBoth;
+          display: inline-block;
+          vertical-align: middle;
+          padding-left: $padding-l;
         }
       }
     }
     .navbar {
-      height: 30%;
+      position: relative;
+      height: $navbar-height;
+      background-color: $color-green;
+      text-align: center;
       .menu {
         li {
-          float: left;
+          display: inline-block;
+          a {
+            color: $color-gray;
+          }
         }
         &::after {
           @include clearBoth;
         }
+      }
+      .more-btn {
       }
     }
   }

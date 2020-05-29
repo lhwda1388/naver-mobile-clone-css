@@ -1,131 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naver</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naver</title>
-  <link rel="stylesheet" href="./css/main.css" />
-</head>
+  <body>
+    <div class="wrap">
+      <!-- Header -->
+      <header class="header">
+        <div class="header__in">
+          <!-- Logo -->
+          <h1 class="logo">
+            <a href="">
+              <img src="img/logo.png" alt="logo" />
+            </a>
+          </h1>
 
-<body>
-  <div class="wrap">
-    <!-- Header -->
-    <header class="header">
-      <div class="header__in">
-        <!-- Logo -->
-        <h1 class="logo">
-          <a href="">
-            <img src="" alt="logo" />
-          </a>
-        </h1>
+          <!-- Search Input -->
+          <input
+            type="text"
+            class="search"
+            placeholder="검색어를 입력해주세요."
+          />
+          <!-- Actions Button -->
+          <ul class="actions">
+            <li>
+              <a href="#"><img src="img/mic.png" alt="mic" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/camera.png" alt="camera" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/map.png" alt="map" /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- Navbar -->
+        <nav class="navbar">
+          <!-- Menu -->
+          <ul class="menu">
+            <li><a href="#">뭐하지</a></li>
+            <li><a href="#">엔터</a></li>
+            <li><a href="#">My페이</a></li>
+            <li><a href="#">셀렉티브</a></li>
+            <li><a href="#">트렌드</a></li>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">뉴스</a></li>
+            <li><a href="#">연예</a></li>
+            <li><a href="#">스포츠</a></li>
+            <li class="on"><a href="#">검색차트</a></li>
+            <li><a href="#">쇼핑</a></li>
+            <li><a href="#">My구독</a></li>
+            <li><a href="#">우리동네</a></li>
+          </ul>
+          <!-- More Button -->
+          <button class="more-btn"><img src="" />+</button>
+        </nav>
+      </header>
 
-        <!-- Search Input -->
-        <input type="text" class="search" placeholder="" />
-        <!-- Actions Button -->
-        <ul class="actions">
-          <li>
-            <a href="#"><img src="" alt="mic" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="" alt="camera" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="" alt="map" /></a>
-          </li>
-        </ul>
+      <!-- Container -->
+      <div class="container">
+        <!-- 1. 검색어 트렌드 -->
+        <section class="container__box search-trend"></section>
+        <!-- 2. 급상승 검색어 -->
+        <section class="container__box search-inc"></section>
+        <!-- 3. 데이터랩 바로가기 -->
+        <section class="container__box datalab"></section>
+        <!-- 4. 급상승 토픽 -->
+        <section class="container__box inc-topic"></section>
+        <!-- 5. 내관심사를 반영한, 나만의 급상승 검색어 -->
+        <section class="container__box search-inc-mine"></section>
+        <!-- 6. 상영 영화순위 -->
+        <section class="container__box movie-rank"></section>
+        <!-- 7. 지역. 명소 일간 검색어 -->
+        <section class="container__box area-sights-search"></section>
+        <!-- 8. 급상승 웹툰-->
+        <section class="container__box inc-webtoon"></section>
+        <!-- 9. 검색차트 먼저보기 -->
+        <section class="container__box search-chart"></section>
+        <!-- 10. 급상승 음악 -->
+        <section class="container__box inc-music"></section>
+        <!-- 11. 인기표제어 일간 검색어-->
+        <section class="container__box popular-headword-search"></section>
+        <!-- 12. 베스트 셀러 -->
+        <section class="container__box best-seller"></section>
+        <!-- 13. 이런 콘텐츠 어때요?-->
+        <section class="container__box content-recomm"></section>
       </div>
-      <!-- Navbar -->
-      <nav class="navbar">
-        <!-- Menu -->
-        <ul class="menu">
-          <li><a href="#">뭐하지</a></li>
-          <li><a href="#">엔터</a></li>
-          <li><a href="#">My페이</a></li>
-          <li><a href="#">셀렉티브</a></li>
-          <li><a href="#">트렌드</a></li>
-          <li><a href="#">홈</a></li>
-          <li><a href="#">뉴스</a></li>
-          <li><a href="#">연예</a></li>
-          <li><a href="#">스포츠</a></li>
-          <li class="on"><a href="#">검색차트</a></li>
-          <li><a href="#">쇼핑</a></li>
-          <li><a href="#">My구독</a></li>
-          <li><a href="#">우리동네</a></li>
-        </ul>
-        <!-- More Button -->
-        <button class="more-btn"><img src="" />+</button>
-      </nav>
-    </header>
-
-    <!-- Container -->
-    <div class="container">
-      <!-- 1. 검색어 트렌드 -->
-      <section class="container__box search-trend">
-      </section>
-      <!-- 2. 급상승 검색어 -->
-      <section class=" container__box search-inc">
-      </section>
-      <!-- 3. 데이터랩 바로가기 -->
-      <section class="container__box datalab"></section>
-      <!-- 4. 급상승 토픽 -->
-      <section class="container__box inc-topic"></section>
-      <!-- 5. 내관심사를 반영한, 나만의 급상승 검색어 -->
-      <section class="container__box search-inc-mine"></section>
-      <!-- 6. 상영 영화순위 -->
-      <section class="container__box movie-rank"></section>
-      <!-- 7. 지역. 명소 일간 검색어 -->
-      <section class="container__box area-sights-search"></section>
-      <!-- 8. 급상승 웹툰-->
-      <section class="container__box inc-webtoon"></section>
-      <!-- 9. 검색차트 먼저보기 -->
-      <section class="container__box search-chart"></section>
-      <!-- 10. 급상승 음악 -->
-      <section class="container__box inc-music"></section>
-      <!-- 11. 인기표제어 일간 검색어-->
-      <section class="container__box popular-headword-search"></section>
-      <!-- 12. 베스트 셀러 -->
-      <section class="container__box best-seller"></section>
-      <!-- 13. 이런 콘텐츠 어때요?-->
-      <section class="container__box content-recomm"></section>
+      <!-- Footer -->
+      <footer class="footer">
+        <!-- Footer Row1 -->
+        <div class="footer__row">
+          <ul class="left-btns">
+            <li><a href="#">가-</a></li>
+            <li><a href="#">가+</a></li>
+          </ul>
+          <ul class="right-btns">
+            <li>
+              <a href="#"><img src="" alt="r1" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="" alt="r2" /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- Footer Row2 -->
+        <div class="footer__row2">
+          <ul class="services">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">전체서비스</a></li>
+            <li><a href="#">PC버전</a></li>
+          </ul>
+          <ul class="terms">
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">검색마케팅</a></li>
+          </ul>
+          <ul class="copyright">
+            <li><a href="#">Naver Corp</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
-    <!-- Footer -->
-    <footer class="footer">
-      <!-- Footer Row1 -->
-      <div class="footer__row">
-        <ul class="left-btns">
-          <li><a href="#">가-</a></li>
-          <li><a href="#">가+</a></li>
-        </ul>
-        <ul class="right-btns">
-          <li>
-            <a href="#"><img src="" alt="r1" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="" alt="r2" /></a>
-          </li>
-        </ul>
-      </div>
-      <!-- Footer Row2 -->
-      <div class="footer__row2">
-        <ul class="services">
-          <li><a href="#">로그인</a></li>
-          <li><a href="#">전체서비스</a></li>
-          <li><a href="#">PC버전</a></li>
-        </ul>
-        <ul class="terms">
-          <li><a href="#">이용약관</a></li>
-          <li><a href="#">개인정보처리방침</a></li>
-          <li><a href="#">검색마케팅</a></li>
-        </ul>
-        <ul class="copyright">
-          <li><a href="#">Naver Corp</a></li>
-          <li><a href="#">고객센터</a></li>
-        </ul>
-      </div>
-    </footer>
-  </div>
-
-</body>
-
+  </body>
 </html>
