@@ -6,28 +6,84 @@ body {
 }
 
 .wrap {
-  .hedaer {
+  .header {
     position: fixed;
     top: 0;
     left: 0;
     height: $header-height;
     background-color: $color-white;
     width: 100%;
-    .logo {
-    }
-    .search {
-    }
-    .actions {
-      li {
-        float: left;
+    .header__in {
+      position: relative;
+      height: 70%;
+      .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .search {
+        position: absolute;
+        top: 0;
+        left: 50px;
+      }
+      .actions {
+        position: absolute;
+        top: 0;
+        right: 0;
+        li {
+          float: left;
+        }
+        &::after {
+          @include clearBoth;
+        }
       }
     }
-    &::after {
-      @include clearBoth;
+    .navbar {
+      height: 30%;
+      .menu {
+        li {
+          float: left;
+        }
+        &::after {
+          @include clearBoth;
+        }
+      }
     }
   }
   .container {
+    height: 200px;
+    padding: $padding-m $padding-m;
   }
   .footer {
+    padding: $padding-m $padding-m;
+    .footer__row {
+      .left-btns {
+        float: left;
+        li {
+          float: left;
+        }
+        &::after {
+          @include clearBoth;
+        }
+      }
+      .right-btns {
+        float: right;
+        li {
+          float: left;
+        }
+        &::after {
+          @include clearBoth;
+        }
+      }
+      &::after {
+        @include clearBoth;
+      }
+    }
+    .footer__row2 {
+      text-align: center;
+      ul li {
+        display: inline-block;
+      }
+    }
   }
 }
