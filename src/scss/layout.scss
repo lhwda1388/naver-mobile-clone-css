@@ -1,4 +1,33 @@
+@import './variable.scss';
+@import './mixin.scss';
+
+body {
+  background-color: $body-background-color;
+}
+
 .wrap {
+  .hedaer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $header-height;
+    background-color: $color-white;
+    width: 100%;
+    .logo {
+    }
+    .search {
+    }
+    .actions {
+      li {
+        float: left;
+      }
+    }
+    &::after {
+      @include clearBoth;
+    }
+  }
   .container {
+  }
+  .footer {
   }
 }

@@ -19,22 +19,24 @@ function html() {
 }
 
 function connectDev() {
+  console.log('connectDev...')
   connect.server({
-    name: 'dev',
-    root: 'dist',
+    root: './dist',
     port: 8000,
     livereload: true,
   })
 }
 
 function watchDist() {
+  console.log('watchDist...')
   watch('src/scss/*.scss', scss)
   watch('src/*.html', html)
 }
 
-exports.watch = function () {
+exports.watch = watchDist
+exports.dev = function () {
+  connectDev()
   watchDist()
 }
-exports.dev = series(connectDev, watchDist)
 
 exports.build = series(clean, parallel(scss))
